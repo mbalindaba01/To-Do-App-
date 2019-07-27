@@ -15,6 +15,7 @@ const submit = (e) => {
  let input = document.querySelector('input');
  if(input.value != '');
  addTask(input.value);
+ document.querySelector("input").value="";
  
 }
   
@@ -22,8 +23,8 @@ const submit = (e) => {
 const addTask = (task) => {
   const ul = document.querySelector('ul');
   const li = document.querySelector('li');
-  li.innerHTML = `<input type="checkbox"><label>${task}</label><span class="delete">x</span>`;
-  ul.appendChild('li');
+  li.innerHTML = `<input type="checkbox"><label>${task}</label><span class="delete">x</spanspan>`;
+  ul.appendChild(li);
   
   document.querySelector('.taskboard').style.display = 'block';
 }
